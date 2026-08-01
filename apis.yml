@@ -1,8 +1,28 @@
 aid: tem
 name: Tem
-description: Tem is a company surfaced as a portfolio company of lightspeed-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Tem (Tem-Energy Limited) is a UK-based energy technology company building
+  AI-native transaction infrastructure for a modern energy market. Its RED
+  platform is a modern utility that removes wholesale market markups to cut
+  business electricity costs by up to 30%, provides transparent line-by-line
+  billing from half-hourly meter data, and gives generators fairer earnings
+  with renewable-energy traceability across 6,000+ sites. Backed by a February
+  2026 GBP 55M Series B led by Lightspeed Venture Partners. The customer-facing
+  platform runs at app.tem.energy behind an OIDC login; the platform API at
+  api.tem.energy is a private AWS API Gateway with no publicly documented
+  developer surface at the time of profiling.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://app.tem.energy/assets/images/tem-symbol-orange.png
 url: https://raw.githubusercontent.com/api-evangelist/tem/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,12 +32,56 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Energy
+- Electricity
+- Utilities
+- Sustainability
+- Renewable Energy
+- Fintech
+- Infrastructure
+- United Kingdom
+apis:
+- name: Tem RED Platform API
+  description: >-
+    Private platform API powering the Tem RED utility application. Served from
+    an AWS API Gateway at api.tem.energy and gated behind OIDC authentication;
+    no public OpenAPI, SDK, or developer documentation was published at the time
+    of profiling (api.tem.energy returns HTTP 403 ForbiddenException).
+  humanURL: https://tem.energy
+  baseURL: https://api.tem.energy
+  x-access: private
+  properties:
+  - type: Login
+    url: https://app.tem.energy/auth/login
+  - type: SignUp
+    url: https://app.tem.energy/onboarding
+common:
+- type: DomainSecurity
+  url: security/tem-domain-security.yml
+- type: Website
+  url: https://tem.energy
+- type: StatusPage
+  url: https://status.tem.energy
+- type: Support
+  url: https://tem.energy/get-in-touch
+- type: PrivacyPolicy
+  url: https://tem.energy/privacy-policy
+- type: TermsOfService
+  url: https://tem.energy/terms-of-use
+- type: GitHubOrganization
+  url: https://github.com/tem-energy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/tem-energy/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
