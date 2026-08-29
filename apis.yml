@@ -11,6 +11,17 @@ description: >-
   platform runs at app.tem.energy behind an OIDC login; the platform API at
   api.tem.energy is a private AWS API Gateway with no publicly documented
   developer surface at the time of profiling.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
